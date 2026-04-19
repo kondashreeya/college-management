@@ -92,7 +92,7 @@ if os.environ.get("RENDER"):
             "USER": os.environ.get("MYSQLUSER"), 
             "PASSWORD": os.environ.get("MYSQLPASSWORD"), 
             "HOST": os.environ.get("MYSQLHOST"), 
-            "PORT": os.environ.get("MYSQLPORT", "3306"), 
+            "PORT": os.environ.get("MYSQLPORT", "3306"),
         } 
     } 
  
@@ -106,6 +106,9 @@ else:
             "PASSWORD": "shree@444", 
             "HOST": "localhost", 
             "PORT": "3306", 
+            "OPTIONS": {
+            "ssl": {"ca": "/etc/ssl/certs/ca-certificates.crt"},
+}
         } 
     } 
 
