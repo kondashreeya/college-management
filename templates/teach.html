@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher</title>
+    
+</head>
+
+<body>
+    <style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f4f6f9;
+        margin:40px;
+    }
+
+    h2{
+        color:#090909;
+        margin-bottom:15px;
+    }
+
+    form{
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.08);
+        width:450px;
+    }
+
+    button{
+        background:#3fa217;
+        color:white;
+        border:none;
+        padding:10px 18px;
+        border-radius:6px;
+        cursor:pointer;
+        font-size:15px;
+    }
+
+    button:hover{
+        background:#0f791b;
+    }
+
+    table{
+        width:80%;
+        border-collapse:collapse;
+        margin-top:20px;
+        background:white;
+        box-shadow:0 4px 10px rgba(0,0,0,0.08);
+        border-radius:10px;
+        overflow:hidden;
+    }
+
+    table th{
+        background:white;
+        color:rgb(0, 0, 0);
+        padding:12px;
+        text-align:center;
+        font-size: 20px;
+    }
+
+    table td{
+        padding:10px;
+        text-align:center;
+        border-bottom:1px solid #ddd;
+    }
+
+    table tr:nth-child(even){
+        background:#f9f9f9;
+    }
+
+    table tr:hover{
+        background:#ecf5ff;
+    }
+
+    a{
+        text-decoration:none;
+        color:#2980b9;
+        font-weight:bold;
+    }
+
+    a:hover{
+        color:red;
+    }
+
+    .home-btn{
+        margin-top:25px;
+    }
+</style>
+    <h2>Faculty form  Form</h2>
+
+    <!-- FORM -->
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        {% if edit %}
+            <button type="submit">Update</button>
+        {% else %}
+            <button type="submit">Save</button>
+        {% endif %}
+    </form>
+
+    <hr>
+
+    <h2>Teacher Details</h2>
+
+    <!-- TABLE -->
+    <table border="1">
+        <tr>
+            <th>Teacher Id</th>
+            <th>Teacher Name</th>
+            <th>Teacher Mobile</th>
+            <th>Teacher Department</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for i in data %}
+        <tr>
+            <td>{{ i.teacher_id }}</td>
+            <td>{{ i.teacher_name }}</td>
+            <td>{{ i.teacher_mobile }}</td>
+            <td>{{ i.department }}</td>
+            <td>
+                <a href="{% url 'update' i.id %}">Edit</a> |
+                <a href="{% url 'delete' i.id %}" onclick="return confirm('Are you sure to delete?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br><br>
+
+    <!-- HOME BUTTON -->
+    <a href="{% url 'HOME' %}">
+        <button>Home</button>
+    </a>
+
+</body>
+</html>

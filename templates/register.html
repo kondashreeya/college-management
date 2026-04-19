@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    
+</head>
+
+<body class="register-page">
+
+    <div class="card">
+        <h1>Register</h1>
+        {% if message %}
+            <p class="error">{{ message }}</p>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Username" name="username"><br><br>
+            <input type="email" placeholder="Email" name="useremail"><br><br>
+            <input type="password" placeholder="Password" name="password1"><br><br>
+            <input type="password" placeholder="Confirm Password" name="confirm"><br><br>
+
+            <button type="submit" class="btn">Register</button>
+        </form><br>
+
+        <a href="{% url 'LOG1' %}" class="link-btn">Already have an account</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+/* Full page background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url("https://content3.jdmagicbox.com/v2/comp/hyderabad/x6/040pxx40.xx40.200321104705.c8x6/catalogue/guru-nanak-institutions-ibrahimpatnam-rangareddy-colleges-1svaooikj8.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card container */
+.card {
+    background: rgba(222, 221, 221, 0.85);
+    padding: 25px;
+    width: 400px;
+    height: 480px;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+
+/* Heading */
+.card h1 {
+    margin-top: 5px;
+}
+
+/* Input fields */
+.card input {
+    width: 90%;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Button */
+.btn {
+    background-color: #1e293b;
+    color: white;
+    padding: 12px;
+    width: 95%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Button hover */
+.btn:hover {
+    background-color: #0f172a;
+}
+
+/* Toggle link (login/register switch) */
+.toggle {
+    margin-top: 15px;
+    color: purple;
+    cursor: pointer;
+}
+
+/* Normal link */
+.link-btn {
+    display: block;
+    margin-top: 15px;
+    color: purple;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    /* background-color: #ffe5e5;
+    border: 1px solid red; */
+    /* padding: 10px;
+    margin-bottom: 15px; */
+    /* border-radius: 8px; */
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Hide class (for toggle) */
+.hidden {
+    display: none;
+}
+
+
+.card1 {
+    background: rgba(222, 221, 221, 0.85);
+    padding: 25px;
+    width: 400px;
+    height: 320px;
+    border-radius: 15px;
+    text-align: center;
+}
+.card1 h1 {
+    margin-top: 5px;
+}
+
+/* Input fields */
+.card1 input {
+    width: 90%;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 15px;
+    background: #0f0f0f;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;   /* keep it on top */
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-top: 90px;   /* space for navbar */
+    padding-bottom: 20px;
+    gap: 35px;
+    height: auto;        /* ❌ remove 100vh */
+}
+
+/* Cards */
+.home-card {
+    background: rgb(255, 255, 255);
+    width: 280px;
+    height: 120px;
+    padding: 20px;
+    margin: 8px;
+    border-radius: 15px;
+    text-align: center;
+
+}
+
+/* Card headings */
+.home-card h2 {
+    margin-bottom: 10px;
+}
+
+/* Colored buttons */
+.green {
+    background-color: #16a34a;
+    font-size: 20px;
+}
+
+.blue {
+    background-color: #377bcdf5;
+    font-size: 20px;
+}
+
+.orange {
+    background-color: #f5740b;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Button hover */
+.green:hover {
+    background-color: #15803d;
+}
+
+.blue:hover {
+    background-color: #1d4ed8;
+}
+
+.orange:hover {
+    background-color: #d97706;
+}
+
+/* ===== Department Page Styling ===== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dep-wrapper {
+    width: 95%;
+    margin: 100px auto 20px auto; /* space below navbar */
+}
+
+/* Title */
+.dep-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form section */
+.dep-form {
+    margin-bottom: 20px;
+}
+
+.dep-form label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.dep-input {
+    padding: 6px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Add button */
+.dep-add-btn {
+    background-color: #1e8e5a;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dep-add-btn:hover {
+    background-color: #166c44;
+}
+
+/* Table */
+.dep-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+/* Table header */
+.dep-table th {
+    text-align: left;
+    padding: 12px;
+    background-color: #f1f1f1;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Table rows */
+.dep-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Delete button */
+.dep-delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dep-delete-btn:hover {
+    background-color: #b02a37;
+}
+
+/* Edit button */
+.dep-edit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.dep-edit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/* Apply ONLY inside student page */
+.student-page .student-form-box {
+    margin-bottom: 20px;
+}
+
+.student-page .student-form-box label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.student-page .student-input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.student-page .student-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.student-page .student-save {
+    background-color: #28a745;
+}
+
+.student-page .student-update {
+    background-color: #007bff;
+}
+
