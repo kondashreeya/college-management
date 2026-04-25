@@ -1,1 +1,1 @@
-gunicorn college_deploy.wsgi:application
+web: gunicorn college_deploy.wsgi
